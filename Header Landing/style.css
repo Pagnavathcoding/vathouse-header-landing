@@ -1,0 +1,137 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Mukta', sans-serif;
+}
+header{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(./background.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+nav{
+    width: 100%;
+    height: 10vh;
+    background: #1f2937;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+nav a{
+    text-decoration: none;
+    color: #fff;
+}
+.logo h1{
+    font-size: 30px;
+    font-weight: lighter;
+}
+.menu{
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+}
+.menu li{
+    padding: 0 0 0 1.5em;
+}
+.menu li a{
+    font-size: 18px;
+}
+.container{
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    color: #fff;
+    padding: 0 1em;
+}
+.container h1{
+    font-size: 50px;
+}
+.container p{
+    font-size: 18px;
+}
+.container button{
+    width: 150px;
+    height: 50px;
+    border: none;
+    outline: none;
+    margin-top: 1em;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    background: #f04e98;
+    color: #fff;
+}
+.close{
+    display: none;
+}
+.bar{
+    display: none;
+    cursor: pointer;
+}
+@media (max-width: 700px) {
+    nav{
+        justify-content: space-between;
+        padding: 0 1em;
+    }
+    .logo h1{
+        font-weight: bold;
+    }
+    .close{
+        display: block;
+    }
+    .bar{
+        display: flex;
+    }
+    .menu{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: #1f2937;
+        z-index: 10;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0 1em;
+        transition: 0.3s;
+        transform: translateX(-100%);
+    }
+    .menu li{
+        padding: 0;
+        margin-top: 1em;
+    }
+    .menu li a{
+        font-weight: bold;
+    }
+    .close{
+        position: absolute;
+        top: 1em;
+        right: 1em;
+        width: 40px;
+        height: 40px;
+        background: #2d333b;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+    .close img{
+        height: 40px;
+    }
+    .show-menu-class{
+        transform: translateX(0%);
+        transition: 0.3s;
+    }
+    .stuck-on-scroll{
+        overflow: hidden;
+    }
+}
+
+
